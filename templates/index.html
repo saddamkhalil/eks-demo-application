@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message App</title>
+</head>
+<body>
+    <h1>Enter a Message</h1>
+    <form method="POST">
+        <input type="text" name="message" required>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <h2>Stored Messages</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Message</th>
+        </tr>
+        {% for msg in messages %}
+        <tr>
+            <td>{{ msg[0] }}</td>
+            <td>{{ msg[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
